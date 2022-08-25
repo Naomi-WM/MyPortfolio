@@ -1,0 +1,59 @@
+* HOME
+home__social
+https://www.linkedin.com/
+https://github.com/
+
+home__description
+Just a cold sprite soda  on a warm afternoon, in human form. Refreshing and revitalizing the spaces I am in.
+
+* ABOUT
+about__description
+ Engineering student, with keen interest in IoT, Data Science.
+ 
+about__info-name
+Years <br> experience
+Completed <br> project
+Companies <br> worked
+
+
+* SERVICES
+services__modal-service
+I develop the user interface.
+Web page development.(Frontend)
+I design using AutoCad
+
+
+* PORTFOLIO
+portfolio__description
+Website adaptable to all devices, with ui components and animated interactions.
+
+
+* PROJECT
+project__description
+Contact me now and get a 30% discount on your new project.
+
+
+* TESTIMONIAL
+testimonial__description
+"She designed a simple fantastic resume, exactly as I had envisioned it in my mind, and within a very short time."
+
+
+
+* FOOTER
+footer__social
+https://www.instagram.com/naomi_wairimu/
+https://twitter.com/N_Wairimu_M
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+</style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');

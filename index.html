@@ -695,31 +695,31 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form action="https://formspree.io/f/moqbebpe" method="POST" class="contact_form grid">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
                             <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
+                            <input type="text" name="Name" class="contact_input" required>
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
+                            <input type="email" name="Email" class="contact_input" required>
                         </div>
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Project</label>
-                        <input type="text" class="contact_input">
+                        <input type="text" name="Project" class="contact_input">
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                        <textarea name="Message" id="" cols="0" rows="7" class="contact_input" required></textarea>
                     </div>
 
                     <div>
-                       <a href="#" class="button button--flex">
+                       <button class= "button button--flex">
                         Send Message
                         <i class="uil uil-message button_icon"></i>
-                       </a> 
+                       </button>
                     </div>
                 </form>
                 </div>
@@ -775,5 +775,40 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="main.js"></script>
+        
+        
+        <!-- Place this form script at the end of the body tag -->
+        <script>
+            var form = document.getElementById("my-form");
+            
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var status = document.getElementById("my-form-status");
+              var data = new FormData(event.target);
+              fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+              }).then(response => {
+                if (response.ok) {
+                  status.innerHTML = "Thanks for your submission!";
+                  form.reset()
+                } else {
+                  response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    } else {
+                      status.innerHTML = "Oops! There was a problem submitting your form"
+                    }
+                  })
+                }
+              }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              });
+            }
+            form.addEventListener("submit", handleSubmit)
+        </script>
     </body>
 </html>
